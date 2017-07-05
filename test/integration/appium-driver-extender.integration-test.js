@@ -93,7 +93,7 @@ describe('appiumDriverExtender', function () {
   });
   describe('.executeMethod', function () {
     it('should call "setGeolocation" method and get result plus source and screenshot', async function () {
-      const res = await driver.executeMethod('setGeoLocation', 100, 200);
+      const res = await driver.executeMethod('setGeoLocation', [100, 200]);
       res.screenshot.should.exist;
       res.source.should.exist;
       const getGeoLocationRes = await driver.executeMethod('getGeoLocation');
