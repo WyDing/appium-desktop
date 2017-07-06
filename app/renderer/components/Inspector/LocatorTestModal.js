@@ -73,7 +73,7 @@ export default class LocatorTestModal extends Component {
               multiple='true'
               onChange={(e) => setLocatorTestElement(e.target.value)} 
               value={[locatorTestElement]}>
-              {locatedElements.map(({value:elementId}) => (
+              {locatedElements.map((elementId) => (
                 <option key={elementId} value={elementId}>{elementId}</option>
               ))}
               {locatedElements.length === 0 && <option disabled>Could not find any elements</option>}
